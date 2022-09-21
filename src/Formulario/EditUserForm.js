@@ -29,6 +29,8 @@ const EditUserForm = props => {
       <input type="text" name="pais" value={user.pais} onChange={handleInputChange} />
       <label>Cidade</label>
       <input type="text" name="cidade" value={user.cidade} onChange={handleInputChange} />
+      <label>Imagem</label>
+      <input type="file" name="imagem" value={user.imagem} onChange={handleInputChange} />
       <button>Update user</button>
       <button onClick={() => props.setEditing(false)} className="button muted-button">
         Cancel
