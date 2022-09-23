@@ -9,7 +9,7 @@ const App = () => {
 		{ id: 1, pais: 'Brazil', cidade: 'São Paulo'},
 		{ id: 2, pais: 'Angola', cidade: 'Malange' },
 		{ id: 3, pais: 'Venezuela', cidade: 'Caracas' },
-    { id: 4, pais:  'Colombia', cidade: 'Bogota' },
+        { id: 4, pais:  'Colombia', cidade: 'Bogota' },
 	]
 
 	const initialFormState = { id: null, pais: '', cidade: '', imagen: '' }
@@ -45,7 +45,6 @@ const App = () => {
 
 	return (
 		<div className="container">
-			<h1>CRUD </h1>
 			<div className="flex-row">
 				<div className="flex-large">
 					{editing ? (
@@ -60,13 +59,13 @@ const App = () => {
 						</Fragment>
 					) : (
 						<Fragment>
-							<h2>Add user</h2>
+							<h2>VIAGENS</h2>
 							<AddUserForm addUser={addUser} />
 						</Fragment>
 					)}
 				</div>
 				<div className="flex-large">
-					<h2>View users</h2>
+					<h2>DESTINOS</h2>
 					<UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
 				</div>
 			</div>
