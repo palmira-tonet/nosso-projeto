@@ -5,9 +5,9 @@ const AddUserForm = props => {
 	const [ user, setUser ] = useState(initialFormState)
 
 	const handleInputChange = event => {
-		const { pais, value } = event.target
+		const { name, value } = event.target
 
-		setUser({ ...user, [pais]: value })
+		setUser({ ...user, [name]: value })
 	}
 
 	return (
