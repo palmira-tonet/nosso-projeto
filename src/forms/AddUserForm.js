@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const AddUserForm = props => {
-	const initialFormState = { id: null, pais: '', cidade: '', imagem: '' }
+	const initialFormState = { id: null, pais: '', cidade: '' }
 	const [ user, setUser ] = useState(initialFormState)
 
 	const handleInputChange = event => {
@@ -14,7 +14,7 @@ const AddUserForm = props => {
 		<form
 			onSubmit={event => {
 				event.preventDefault()
-				if (!user.pais || !user.cidade || !user.imagem ) return
+				if (!user.pais || !user.cidade ) return
 
 				props.addUser(user)
 				setUser(initialFormState)
@@ -24,8 +24,6 @@ const AddUserForm = props => {
 			<input type="text" name="pais" value={user.pais} onChange={handleInputChange} />
 			<label>Cidade</label>
 			<input type="text" name="cidade" value={user.cidade} onChange={handleInputChange} />
-			<label>Imagem</label>
-			<input type="file" name="imagem" value={user.imagem} onChange={handleInputChange} />
 			<button>Add new user</button>
 		</form>
 	)

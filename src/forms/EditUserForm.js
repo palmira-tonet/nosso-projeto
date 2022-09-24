@@ -12,9 +12,9 @@ const EditUserForm = props => {
   // You can tell React to skip applying an effect if certain values haven’t changed between re-renders. [ props ]
 
   const handleInputChange = event => {
-    const { pais, value } = event.target
+    const { name, value } = event.target
 
-    setUser({ ...user, [pais]: value })
+    setUser({ ...user, [name]: value })
   }
 
   return (
@@ -29,8 +29,6 @@ const EditUserForm = props => {
       <input type="text" name="pais" value={user.pais} onChange={handleInputChange} />
       <label>Cidade</label>
       <input type="text" name="cidade" value={user.cidade} onChange={handleInputChange} />
-      <label>Imagem</label>
-      <input type="file" name="imagem" value={user.imagem} onChange={handleInputChange} />
       <button>Update user</button>
       <button onClick={() => props.setEditing(false)} className="button muted-button">
         Cancel

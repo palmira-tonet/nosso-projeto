@@ -12,7 +12,7 @@ const App = () => {
         { id: 4, pais:  'Colombia', cidade: 'Bogota' },
 	]
 
-	const initialFormState = { id: null, pais: '', cidade: '', imagen: '' }
+	const initialFormState = { id: null, pais: '', cidade: '' }
 
 	// Setting state
 	const [ users, setUsers ] = useState(usersData)
@@ -40,7 +40,7 @@ const App = () => {
 	const editRow = user => {
 		setEditing(true)
 
-		setCurrentUser({ id: user.id, pais: user.pais, cidade: user.cidade, imagem: user.imagem  })
+		setCurrentUser({ id: user.id, pais: user.pais, cidade: user.cidade })
 	}
 
 	return (
