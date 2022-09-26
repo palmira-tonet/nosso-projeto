@@ -20,13 +20,19 @@ const AddUserForm = props => {
 				setUser(initialFormState)
 			}}
 		>
+		
 			<label>Pais</label>
 			<input type="text" name="pais" value={user.pais} onChange={handleInputChange} />
 			<label>Cidade</label>
 			<input type="text" name="cidade" value={user.cidade} onChange={handleInputChange} />
-	
-			<button>Add new user</button>
+			<label>Imagem</label>
+			<input type="url" name="url"></input>
+			<button>Add novo destino</button>
+			
 		</form>
+		
+		
+	
 	)
 }
 
