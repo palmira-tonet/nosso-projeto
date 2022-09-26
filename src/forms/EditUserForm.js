@@ -31,7 +31,7 @@ const EditUserForm = props => {
       <input type="text" name="cidade" value={user.cidade} onChange={handleInputChange} />
       <label>Imagem</label>
       <input type="url"  name="url" value={user.url} onChange={handleInputChange} />
-      <button>Add novo destino</button>
+      <button>Atualizar Destino</button>
       <button onClick={() => props.setEditing(false)} className="button muted-button">
         Cancel
       </button>
