@@ -6,6 +6,7 @@ const UserTable = props => (
       <tr>
         <th>Pais</th>
         <th>Cidade</th>
+        <th>Imagem</th>
         <th>Funções</th>
       </tr>
     </thead>
@@ -15,6 +16,8 @@ const UserTable = props => (
           <tr key={user.id}>
             <td>{user.pais}</td>
             <td>{user.cidade}</td>
+            <td><img className="imagem" src={user.imagem}/></td>
+            
             <td>
               <button
                 onClick={() => {

@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
+
 const AddUserForm = props => {
-	const initialFormState = { id: null, pais: '', cidade: '' }
+	const initialFormState = { id: null, pais: '', cidade: '', imagem: '' }
 	const [ user, setUser ] = useState(initialFormState)
 
 	const handleInputChange = event => {
@@ -10,11 +11,12 @@ const AddUserForm = props => {
 		setUser({ ...user, [name]: value })
 	}
 
-	return (
+
+return (
 		<form
 			onSubmit={event => {
 				event.preventDefault()
-				if (!user.pais || !user.cidade ) return
+				if (!user.pais || !user.cidade || !user.imagem ) return
 
 				props.addUser(user)
 				setUser(initialFormState)
@@ -25,8 +27,8 @@ const AddUserForm = props => {
 			<input type="text" name="pais" value={user.pais} onChange={handleInputChange} />
 			<label>Cidade</label>
 			<input type="text" name="cidade" value={user.cidade} onChange={handleInputChange} />
-			<label>Imagem</label>
-			<input type="url" name="url"></input>
+	        <label>Imagem</label>
+			<input type="text"  name="imagem" value={user.imagem} onChange={handleInputChange} />
 			<button>Add novo destino</button>
 			
 		</form>
