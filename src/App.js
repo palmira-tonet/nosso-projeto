@@ -3,6 +3,7 @@ import AddUserForm from './forms/AddUserForm'
 import EditUserForm from './forms/EditUserForm'
 import UserTable from './tables/UserTable'
 
+
 const App = () => {
 	// Data
 	const usersData = [
