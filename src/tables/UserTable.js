@@ -16,7 +16,11 @@ const UserTable = props => (
           <tr key={user.id}>
             <td>{user.pais}</td>
             <td>{user.cidade}</td>
-            <td><img className="imagem" src={user.imagem}/></td>
+            <td>
+              <div className='imagem'>
+            <img src={user.imagem}/> 
+              </div>
+            </td>
             
             <td>
               <button
